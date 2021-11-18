@@ -11,26 +11,27 @@ main()
     double* mas1;
     int* mas2;
     int i , k = 0;
-    printf("Введите значение min:  ");
+    printf("Г‚ГўГҐГ¤ГЁГІГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ min:  ");
     scanf_s("%lf", &min);
-    printf("Введите значение max:  ");
+    printf("Г‚ГўГҐГ¤ГЁГІГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ max:  ");
     scanf_s("%lf", &max);
-    printf("Введите значение n:  ");
+    printf("Г‚ГўГҐГ¤ГЁГІГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ n:  ");
     scanf_s("%ld", &n);
     if ((n <= 0)||(max<= min))
     {
-        printf("Ошибка!!! (n <= 0)||(max<= min) ");
+        printf("ГЋГёГЁГЎГЄГ !!! (n <= 0)||(max<= min) ");
         return 0;
     }
     mas1 = (double*)malloc(n * sizeof(double));
     mas2 = (int*)malloc(n * sizeof(int));
     if (mas1 == 0||mas2==0)
     {
-        printf("Ошибка!!! (mas1 == 0||mas2==0)");
+        printf("ГЋГёГЁГЎГЄГ !!! (mas1 == 0||mas2==0)");
         return 0;
     }
     for (i = 0; i < n; i++)
     {
+        mas1[i]=0;
         mas1[i] = (((double)rand() / RAND_MAX) * (max - min) + min);
         printf("%lf\n", mas1[i]);
         mas2[i] = ((mas1[i] - (int)mas1[i]) * 10000000);
@@ -52,7 +53,7 @@ main()
         sum = sum + mas1[i];
     }
     
-    printf("СУММА=%lf\n", sum);
+    printf("Г‘Г“ГЊГЊГЂ=%lf\n", sum);
     free(mas1);
     free(mas2);
     return 0;
